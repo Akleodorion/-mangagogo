@@ -1,0 +1,41 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+
+.illustration{
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  border-radius: 5px;
+
+}
+
+.fading{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: rgba(0, 0, 0, 0);
+  transition: 0.5s;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fading > p {
+ justify-content: right;
+}
+
+.fading > a {
+  color:inherit;
+  text-decoration: none;
+}
+
+.fading:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.901);
+  transition: 0.5s;
+}
