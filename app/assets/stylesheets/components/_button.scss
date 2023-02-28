@@ -4,10 +4,13 @@
   background-color: $red;
   padding: 8px 16px;
   border-radius: 4px;
+  transition: 0.5s;
   &:hover {
     color: white;
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.6;
+    transition: 0.5s;
+
   }
 }
 
@@ -18,10 +21,12 @@
   background-color: $white;
   padding: 8px 16px;
   border-radius: 4px;
+  transition: 0.5s;
   &:hover {
     color: white;
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.6;
+    transition: 0.5s;
   }
 }
 
@@ -31,9 +36,11 @@
   background-color: $black;
   padding: 8px 16px;
   border-radius: 4px;
+  transition: 0.5s;
   &:hover {
     color: white;
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.6;
+    transition: 0.5s;
   }
 }
