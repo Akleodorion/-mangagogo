@@ -1,1 +1,25 @@
 <h1> index </h1>
+<div class = "container">
+  <div class = "cards">
+  <% @manga.each do |element| %>
+    <div>
+      <h2><%= element.saga %></h2>
+      <h3> n°<%=element.volume%></h3>
+      <img src= <%=element.picture%> alt="mangas illustration">
+      <p> <%=element.description %></p>
+      <p> <%= element.updated_at %></p>
+
+    </div>
+
+  <% end %>
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
