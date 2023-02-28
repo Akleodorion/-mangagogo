@@ -6,7 +6,6 @@ class MangasController < ApplicationController
     @manga = Manga.new
   end
 
-
   def create
     @manga = Manga.new(manga_params)
     @manga.user = current_user
@@ -19,25 +18,22 @@ class MangasController < ApplicationController
 
   def show
     @manga = Manga.find(params[:id])
-    end
+  end
+
   def edit; end
 
   def update
     @manga.update(manga_params)
     redirect_to manga_path(@manga)
-
   end
 
   private
 
   def manga_params
-
     params.require(:manga).permit(:saga, :description, :picture, :volume)
-
   end
 
   def set_manga
     @manga = Manga.find(params[:id])
-
   end
 end
