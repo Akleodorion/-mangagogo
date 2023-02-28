@@ -6,7 +6,6 @@ class MangaPolicy < ApplicationPolicy
     end
   end
 
-
   def show?
     true
   end
