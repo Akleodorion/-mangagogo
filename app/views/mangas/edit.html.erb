@@ -1,18 +1,5 @@
-<h1>Mangas#edit</h1>
-<p>Find me in app/views/mangas/edit.html.erb</p>
-
-<h1>Edit Manga</h1>
-<%= form_with model: @manga do |f| %>
-  <%= f.label :saga, 'Saga ?' %>
-  <%= f.text_field :saga %>
-  <%= f.label :volume, 'Volume'%>
-  <%= f.text_field :volume %>
-  <%# <%= f.label :completed %>
-  <%#= f.check_box :completed %>
-  <%= f.submit "Edit" %>
-<% end %>
-<%= link_to "Back to list", mangas_path %>
-
-<%# intégrer au formulaire : ajouter un picture
-d'abord recherchée dans la bd =>
-sinon importée par le user => .%>
+<div class="container mt-5">
+  <h1>Edit Manga</h1>
+  <%= render "form", manga: @manga %>
+  <%= link_to "Back to list", mangas_path %>
+</div>

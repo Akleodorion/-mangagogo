@@ -20,14 +20,14 @@ class MangasController < ApplicationController
   end
 
   def edit
-  #TODO
+    #TODO
   end
 
   def update
     @manga.update(manga_params)
     redirect_to manga_path(@manga)
-  end
-
+   end
+   
   def destroy
     @manga = Manga.find(params[:id])
     @manga.destroy
