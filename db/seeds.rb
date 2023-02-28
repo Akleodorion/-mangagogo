@@ -22,7 +22,7 @@ user.save!
 
   # manga require saga, volume, description, and number
   saga = data["data"]["titles"][0]["title"]
-  picture = data["data"]["images"]["jpg"]["small_image_url"]
+  picture = data["data"]["images"]["jpg"]["large_image_url"]
   volume = rand(1..data["data"]["volumes"].to_i)
   description = data["data"]["synopsis"]
   new_manga = Manga.new(saga: saga, picture: picture, volume: volume, description: description, user: user)

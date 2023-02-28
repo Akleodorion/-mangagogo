@@ -1,5 +1,4 @@
 class MangasController < ApplicationController
-
   before_action :set_manga, only: %i[edit update]
 
   def new
@@ -20,11 +19,23 @@ class MangasController < ApplicationController
     @manga = Manga.find(params[:id])
   end
 
-  def edit; end
+  def edit
+    #TODO
+  end
 
   def update
     @manga.update(manga_params)
     redirect_to manga_path(@manga)
+   end
+   
+  def destroy
+    @manga = Manga.find(params[:id])
+    @manga.destroy
+    redirect_to mangas_path, status: :see_other
+  end
+
+  def index
+    @manga = Manga.all
   end
 
   private
