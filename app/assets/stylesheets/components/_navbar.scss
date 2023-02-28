@@ -10,3 +10,28 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-lewagon .container-navigation {
+  width: 220px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-navigation-items {
+  width: 150px;
+  display: flex;
+  justify-content: start;
+  }
+
+.navbar-lewagon ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  }
+
+.navbar-lewagon li {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
