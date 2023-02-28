@@ -1,0 +1,28 @@
+.main-container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 100%;
+}
+
+.main-container-footer .footer-elements {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.main-container-footer ul {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+
+}
+
+.main-container-footer li {
+  display: inline-block;
+  margin: 5px 0;
+}
