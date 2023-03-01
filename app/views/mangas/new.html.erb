@@ -1,16 +1,15 @@
-<div class="container mt-5">
+<div class="container mt-5 ">
 
-  <h1>Mangas#new</h1>
+  <h1 class="title-create-manga">Ajoutes ton Manga</h1>
 
-
-  <p>Find me in app/views/mangas/new.html.erb</p>
-
-<%= simple_form_for(@manga) do |f| %>
-  <%= f.input :saga %>
-  <%= f.input :description %>
-  <%= f.input :volume %>
-  <%= f.input :picture %>
-  <%= f.submit %>
-<% end %>
+  <div class="form-size">
+    <%= simple_form_for(@manga) do |f| %>
+      <%= f.input :saga, input_html: { class: 'input' } %>
+      <%= f.input :description, input_html: { class: 'input' } %>
+      <%= f.input :volume, input_html: { class: 'input' } %>
+      <%= f.input :picture, input_html: { class: 'input' } %>
+      <div class="submit-create-manga"> <%= f.submit%> </div>
+    <% end %>
+  </div>
 
 </div>

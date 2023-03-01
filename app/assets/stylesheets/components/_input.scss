@@ -1,9 +1,15 @@
 .input{
   background-image: image-url('input.png');
-  background-size: 105% 100%
+  background-size: 105% 100%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 grey
+
 }
 
 .search-bar{
   background-image: image-url('search.png');
-  background-size: 105% 115%
+  background-size: 105% 115%;
+  text-align: center;
+  border-radius: 10px;
 }
