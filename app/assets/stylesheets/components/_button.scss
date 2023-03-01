@@ -32,15 +32,28 @@
 
 .btn-black {
   text-decoration: none;
-  color: white;
+  color: #EEE2CE;
   background-color: $black;
   padding: 8px 16px;
   border-radius: 4px;
   transition: 0.5s;
   &:hover {
-    color: white;
+    color: #EEE2CE;
     text-decoration: none;
     opacity: 0.6;
     transition: 0.5s;
+  }
+}
+
+.linkto-home {
+  color: #EEE2CE;
+  a{
+    color: #EEE2CE;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #EEE2CE;
+    text-decoration: none;
   }
 }
