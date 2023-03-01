@@ -14,7 +14,7 @@ User.destroy_all
 user = User.new(email: "email@mail.com", password: "azerty")
 user.save!
 
-20.times do
+30.times do
   random_id = rand(1..250)
   url = "https://api.jikan.moe/v4/manga/#{random_id}"
   json_data = URI.open(url).read
@@ -24,9 +24,9 @@ user.save!
   saga = data["data"]["titles"][0]["title"]
   picture = data["data"]["images"]["jpg"]["large_image_url"]
   volume = rand(1..data["data"]["volumes"].to_i)
-  description = data["data"]["synopsis"]
+  description = data["data"]["background"]
   new_manga = Manga.new(saga: saga, picture: picture, volume: volume, description: description, user: user)
   new_manga.save!
 
-  sleep 0.5
+  sleep 1
 end

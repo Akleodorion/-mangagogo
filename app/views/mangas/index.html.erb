@@ -1,14 +1,17 @@
 <h1> index </h1>
 <div class = "container">
-  <div class = "cards">
+  <div class="cards">
   <% @manga.each do |element| %>
     <div>
-      <h2><%= element.saga %></h2>
-      <h3> n°<%=element.volume%></h3>
-      <img src= <%=element.picture%> alt="mangas illustration">
-      <p> <%=element.description %></p>
-      <p> <%= element.updated_at %></p>
-
+      <div class="illustration", style="background-image: url(<%=element.picture%>)">
+        <div class="fading">
+          <a href="<%= manga_path(element) %>", style="display: block;width: 100%;height: 100%;">
+          <h2><%= element.saga %></h2>
+          <h3> n°<%=element.volume%></h3>
+          <p> <%= element.updated_at %></p>
+          </a>
+        </div>
+      </div>
     </div>
 
   <% end %>
