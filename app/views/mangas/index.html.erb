@@ -3,7 +3,7 @@
   <div class="cards">
   <% @manga.each do |element| %>
     <div>
-      <div class="illustration", style="background-image: url(<%=element.photo%>)">
+      <div class="illustration", style="background-image: url('<%= cl_image_path element.photo.key, crop: :fill %>')">
         <a href="<%= manga_path(element) %>", style="display: block;width: 100%;height: 100%;">
           <div class="fading">
             <div>
