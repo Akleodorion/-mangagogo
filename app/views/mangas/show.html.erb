@@ -2,7 +2,7 @@
 <div class="container mt-5">
   <div class="d-flex justify-content-between">
     <div>
-     <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
+     <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill if @manga.photo.key %>
     </div>
     <div class="d-flex flex-column align-content-center" style="max-width: 400px">
       <div>
