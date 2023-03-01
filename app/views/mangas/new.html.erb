@@ -1,15 +1,12 @@
 <div class="container mt-5 ">
-
-  <h1 class="title-create-manga">Ajoutes ton Manga</h1>
-
+  <h1 class="title-create-manga">Add your Manga</h1>
   <div class="form-size">
     <%= simple_form_for(@manga) do |f| %>
       <%= f.input :saga, input_html: { class: 'input' } %>
       <%= f.input :description, input_html: { class: 'input' } %>
       <%= f.input :volume, input_html: { class: 'input' } %>
-      <%= f.input :picture, input_html: { class: 'input' } %>
-      <div class="submit-create-manga"> <%= f.submit%> </div>
+      <%= f.input :photo, as: :file %>
+      <div class="submit-create-manga"> <%= f.button :submit, "Create", class: "btn-red"%> </div>
     <% end %>
   </div>
-
 </div>
