@@ -1,7 +1,8 @@
+
 <div class="container mt-5">
   <div class="d-flex justify-content-between">
     <div>
-      <img src="<%= @manga.picture %>" alt="front page manga saga volume">
+     <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
     <div class="d-flex flex-column align-content-center" style="max-width: 400px">
       <div>
@@ -24,7 +25,6 @@
 </div>
 
 <%# NOTEZ : Marie conseille d'intégrer le form de réservation sur cette view. ;o) %>
-
 
 <%# Un snipets pour créer un lien clickable très cool - peut contenir une image ou autre - : %>
 <%# <%= link_to root_path, class: "btn-black linkto-home" do  %>
