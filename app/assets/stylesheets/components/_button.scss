@@ -1,38 +1,45 @@
 .btn-red {
   text-decoration: none;
-  color: white;
+  color: $white;
   background-color: $red;
+  border: 2px solid $black;
   padding: 8px 16px;
   border-radius: 4px;
   transition: 0.5s;
+  font-weight: 600;
   &:hover {
-    color: white;
+    color: $white;
     text-decoration: none;
+    background-color: $red;
+    border: 2px solid $black;
     opacity: 0.6;
     transition: 0.5s;
+    font-weight: 600;
 
   }
 }
-
 
 .btn-white {
   text-decoration: none;
   color: white;
   background-color: $white;
+  border: 2px solid $black;
+  font-weight: 600;
   padding: 8px 16px;
-  border-radius: 4px;
-  transition: 0.5s;
+  border-radius: 10px;
+  transition: 0.2s;
   &:hover {
-    color: white;
-    text-decoration: none;
-    opacity: 0.6;
-    transition: 0.5s;
+    color: $white;
+    text-decoration: underline;
+    border: 2px solid $black;
+    opacity: 0.8;
+    transition: 0.2s;
   }
 }
 
 .btn-black {
   text-decoration: none;
-  color: white;
+  color: $white;
   background-color: $black;
   padding: 8px 16px;
   border-radius: 4px;

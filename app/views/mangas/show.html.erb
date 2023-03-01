@@ -1,3 +1,4 @@
+
 <div class="container mt-5">
   <div class="container">
     <h1>Saga <%= @manga.saga %>
@@ -8,7 +9,7 @@
     </p>
   </div>
   <div class="container">
-    <img src="<%= @manga.picture %>" alt="front page manga saga volume">
+    <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
 </div>
 <%# button >Rent<> %>
@@ -19,3 +20,4 @@
 
 <%# afficher une image de page de couverture de la saga %>
 <%# ajouter une image de décoration %>
+
