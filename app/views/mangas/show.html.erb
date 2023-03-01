@@ -1,23 +1,32 @@
 
 <div class="container mt-5">
-  <div class="container">
-    <h1>Saga <%= @manga.saga %>
-    </h1>
-    <h2>Volume <%= @manga.volume %>
-    </h2>
-    <p><%= @manga.description %>
-    </p>
-  </div>
-  <div class="container">
-    <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="d-flex justify-content-between">
+    <div>
+     <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div class="d-flex flex-column align-content-center" style="max-width: 400px">
+      <div>
+        <h1>Saga : <%= @manga.saga %>
+        </h1>
+        <h2>Volume : <%= @manga.volume %>
+        </h2>
+        <div >
+        <p><%= @manga.description %>
+        </p>
+        </div>
+      </div>
+        <div>
+          <%= link_to mangas_path, class: "btn-black linkto-home" do  %>
+            Back to list
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
-<%# button >Rent<> %>
 
+<%# NOTEZ : Marie conseille d'intégrer le form de réservation sur cette view. ;o) %>
 
-<%#  un prix de location € par jour %>
-<%# button >Soumettre<> %>
-
-<%# afficher une image de page de couverture de la saga %>
-<%# ajouter une image de décoration %>
-
+<%# Un snipets pour créer un lien clickable très cool - peut contenir une image ou autre - : %>
+<%# <%= link_to root_path, class: "btn-black linkto-home" do  %>
+<%# <i class="fa-solid fa-flower"></i> JE VAIS AJOUTER UNE DIV... %>
+<%# <% end %>
