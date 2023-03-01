@@ -1,0 +1,40 @@
+.main-container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 100%;
+}
+
+.main-container-footer .footer-elements {
+  width: 30%;
+  text-align: center;
+}
+
+.main-container-footer ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.main-container-footer li {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.left-footer {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left-footer i{
+  font-size: 8px * 3;
+  margin: 0 8px;
+}
+
+.footer-elements p {
+  margin: 0;
+}

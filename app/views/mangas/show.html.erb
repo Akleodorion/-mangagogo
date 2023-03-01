@@ -1,2 +1,23 @@
-<%= @manga.saga %>
-<%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
+
+<div class="container mt-5">
+  <div class="container">
+    <h1>Saga <%= @manga.saga %>
+    </h1>
+    <h2>Volume <%= @manga.volume %>
+    </h2>
+    <p><%= @manga.description %>
+    </p>
+  </div>
+  <div class="container">
+    <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+</div>
+<%# button >Rent<> %>
+
+
+<%#  un prix de location € par jour %>
+<%# button >Soumettre<> %>
+
+<%# afficher une image de page de couverture de la saga %>
+<%# ajouter une image de décoration %>
+

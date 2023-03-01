@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'mangas/edit'
+  # get 'mangas/update'
   devise_for :users
   root to: "pages#home"
 
