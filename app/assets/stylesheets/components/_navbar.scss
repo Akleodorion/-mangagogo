@@ -40,8 +40,16 @@
 .nav-link {
   text-decoration: none;
   border: 1px solid black;
-  color: white;
+  color: black;
   padding: 0px 35px;
-  border-radius: 15px;
-  background-color: #bc4747;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: lightgray;
+  transition: 0,5s;
+}
+
+.dropdown-card {
+  background-color: lightgray;
 }
