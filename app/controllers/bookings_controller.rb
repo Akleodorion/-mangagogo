@@ -23,7 +23,24 @@ class BookingsController < ApplicationController
   end
 
   def index
+    @bookings = current_user.mangas.map { |manga| manga.bookings.map { |booking| booking } }
+    @waiting = []
+    @accepted = []
+    @denied = []
+    @red = []
+    @bookings.each do |element|
+      if element[:red] == false
+        if element[:pending].exist?
+          element[:pending] == true ? @accepted << element : @denied << element
+        else
+          @waiting << element
+        end
+      else
+        @red << element
+      end
+    end
   end
+
 end
 
 private
