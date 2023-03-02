@@ -5,42 +5,34 @@
       <%= cl_image_tag @manga.photo.key, crop: :fill, class:"illustration-show" if @manga.photo.key %>
     </div>
     <div class="d-flex col-md-4 flex-column align-content-center" style="margin-right: 130px">
-      <div>
-        <h1>Saga : <%= @manga.saga %>
+      <div >
+        <h1 style="margin-bottom: 24px">Saga : <%= @manga.saga %>
         </h1>
-        <h2>Volume : <%= @manga.volume %>
+        <h2 style="margin-bottom: 32px">Volume : <%= @manga.volume %>
         </h2>
-        <div >
+      </div >
+
+      <div>
         <p style="text-align: justify"><%= @manga.description %>
         </p>
-        </div>
       </div>
-        <div>
-          <%= link_to mangas_path, class: "btn-black linkto-home" do  %>
+
+      <div class="div-right d-flex" style="margin-top: 330px">
+          <%= link_to mangas_path, class: "button-black linkto-home ", style: "margin: 1px" do  %>
             Back to list
+          <% end %>
+          <%= link_to mangas_path, class: "button-white", style: "margin: 1px" do  %>
+            Book it !
+          <% end %>
+          <%= link_to mangas_path, class: "button-red linkto-home", style: "margin: 1px" do  %>
+            Delete It
           <% end %>
         </div>
       </div>
   </div>
 </div>
 
-<%# booking button %>
-<%# <%= link_to mangas_path, class: "btn-white linkto-home" do  %>
-<%# Book this !%>
-<%# <% end %>
-
-<%# delete button %>
-<%# <%= link_to mangas_path, class: "btn-red linkto-home" do  %>
-<%# Delete this !%>
-<%# <% end %>
-
-<%# pour l'image : utiliser cover // utiliser un column- %>
-
-
-<%# style="background-color: brown" %>
-
-
 <%# Un snipets pour créer un lien clickable très cool - peut contenir une image ou autre - : %>
-<%# <%= link_to root_path, class: "btn-black linkto-home" do  %>
+<%# <%= link_to root_path, class: "b-black linkto-home" do  %>
 <%# <i class="fa-solid fa-flower"></i> JE VAIS AJOUTER UNE DIV... %>
 <%# <% end %>
