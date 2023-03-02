@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/destroy'
+  get 'bookings/index'
   # get 'mangas/edit'
   # get 'mangas/update'
   devise_for :users
