@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  # get 'mangas/edit'
+  # get 'mangas/update'
   devise_for :users
   root to: "pages#home"
 
@@ -10,8 +13,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :mangas do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: %i[new create]
   end
 
-  resources :bookings, only: [:destroy, :index]
+  resources :bookings, only: %i[destroy index]
 end

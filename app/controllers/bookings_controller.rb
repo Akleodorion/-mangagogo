@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(manga.user == curent_user)
+    @bookings = current_user.mangas.map { |manga| manga.bookings.map { |booking| booking } }
     @waiting = []
     @accepted = []
     @denied = []
