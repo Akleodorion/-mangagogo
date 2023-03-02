@@ -6,4 +6,11 @@ class Manga < ApplicationRecord
   validates :volume, presence: true, numericality: { only_integer: true }
   validates :description, presence: true, length: { minimum: 50, maximum: 250 }
   validates :photo, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_saga_and_description,
+                  against: %i[saga description],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
 end
