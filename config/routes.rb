@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'new/create'
-  get 'new/destroy'
-  get 'new/index'
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/destroy'
+  get 'bookings/index'
   # get 'mangas/edit'
   # get 'mangas/update'
   devise_for :users
@@ -12,5 +13,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :mangas
+  resources :mangas do
+    resources :bookings, only: %i[new create]
+  end
+
+  resources :bookings, only: %i[destroy index]
 end
