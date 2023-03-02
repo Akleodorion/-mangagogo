@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'new/create'
+  get 'new/destroy'
+  get 'new/index'
   # get 'mangas/edit'
   # get 'mangas/update'
   devise_for :users
