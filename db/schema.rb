@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_160651) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_162906) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_160651) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "pending"
-    t.boolean "red"
+    t.boolean "red", default: false
     t.index ["manga_id"], name: "index_bookings_on_manga_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
