@@ -1,17 +1,17 @@
 
 <div class="container mt-5">
-  <div class="d-flex justify-content-between">
-    <div>
-     <%= cl_image_tag @manga.photo.key, height: 300, width: 400, crop: :fill if @manga.photo.key %>
+  <div class="d-flex justify-content-between margin-left-1 margin-right-1">
+    <div class="img-fluid" style="margin-left: 130px">
+      <%= cl_image_tag @manga.photo.key, crop: :fill, class:"illustration-show" if @manga.photo.key %>
     </div>
-    <div class="d-flex flex-column align-content-center" style="max-width: 400px">
+    <div class="d-flex col-md-4 flex-column align-content-center" style="margin-right: 130px">
       <div>
         <h1>Saga : <%= @manga.saga %>
         </h1>
         <h2>Volume : <%= @manga.volume %>
         </h2>
         <div >
-        <p><%= @manga.description %>
+        <p style="text-align: justify"><%= @manga.description %>
         </p>
         </div>
       </div>
@@ -24,7 +24,21 @@
   </div>
 </div>
 
-<%# NOTEZ : Marie conseille d'intégrer le form de réservation sur cette view. ;o) %>
+<%# booking button %>
+<%# <%= link_to mangas_path, class: "btn-white linkto-home" do  %>
+<%# Book this !%>
+<%# <% end %>
+
+<%# delete button %>
+<%# <%= link_to mangas_path, class: "btn-red linkto-home" do  %>
+<%# Delete this !%>
+<%# <% end %>
+
+<%# pour l'image : utiliser cover // utiliser un column- %>
+
+
+<%# style="background-color: brown" %>
+
 
 <%# Un snipets pour créer un lien clickable très cool - peut contenir une image ou autre - : %>
 <%# <%= link_to root_path, class: "btn-black linkto-home" do  %>
