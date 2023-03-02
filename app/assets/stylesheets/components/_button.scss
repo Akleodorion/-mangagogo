@@ -1,52 +1,65 @@
-.btn-red {
+.button-red {
   text-decoration: none;
   color: $white;
   background-color: $red;
-  border: 2px solid $black;
-  padding: 8px 16px;
+  border: 1px solid $black;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   transition: 0.5s;
-  font-weight: 600;
   &:hover {
     color: $white;
     text-decoration: none;
     background-color: $red;
-    border: 2px solid $black;
+    border: 1px solid $black;
     opacity: 0.6;
     transition: 0.5s;
     font-weight: 600;
-
   }
 }
 
-.btn-white {
+.button-white {
   text-decoration: none;
-  color: white;
+  color: #0A0A0A;
   background-color: $white;
-  border: 2px solid $black;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 10px;
+  border: 1px solid $black;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
   transition: 0.2s;
   &:hover {
-    color: $white;
-    text-decoration: underline;
-    border: 2px solid $black;
-    opacity: 0.8;
+    color: #0A0A0A;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid $black;
+    opacity: 0.5;
     transition: 0.2s;
   }
 }
 
-.btn-black {
+.button-black {
   text-decoration: none;
   color: #EEE2CE;
   background-color: $black;
-  padding: 8px 16px;
+  border: 1px solid $black;
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   transition: 0.5s;
   &:hover {
     color: #EEE2CE;
     text-decoration: none;
+    border: 1px solid $black;
+    font-weight: 600;
     opacity: 0.6;
     transition: 0.5s;
   }
@@ -58,7 +71,6 @@
     color: #EEE2CE;
     text-decoration: none;
   }
-
   &:hover {
     color: #EEE2CE;
     text-decoration: none;
