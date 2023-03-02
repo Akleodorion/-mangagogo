@@ -1,2 +1,13 @@
 <h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+
+<ul>
+  <% @wainting.each |element| do %>
+    <li class="wainting"> <%= element %> </li>
+  <% end %>
+  <% @accepted.each |element| do %>
+    <li class="accepted"> <%= element %> </li>
+  <% end %>
+  <% @denied.each |element| do %>
+    <li class="denied"> <%= element %> </li>
+  <% end %>
+</ul>
