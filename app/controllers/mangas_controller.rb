@@ -42,11 +42,10 @@ class MangasController < ApplicationController
   def index
     @mangas = policy_scope(Manga)
     # cette ligne permet de passer le conflit avec la policy scope
-    if params[:query] == ""
+    if params[:query] == "" || params[:query].nil?
       @query = Manga.all
     else
       @query = Manga.search_by_saga_and_description(params[:query])
-
     end
   end
 
