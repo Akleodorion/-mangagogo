@@ -4,7 +4,7 @@ class Manga < ApplicationRecord
 
   validates :saga, presence: true
   validates :volume, presence: true, numericality: { only_integer: true }
-  validates :description, presence: true, length: { minimum: 50, maximum: 250 }
+  validates :description, presence: true, length: { maximum: 250 }
   validates :photo, presence: true
 
   include PgSearch::Model
