@@ -20,12 +20,17 @@ user.save!
   json_data = URI.open(url).read
   data = JSON.parse(json_data)
 
+  #upload on cloudinary
+  file = URI.open(data["data"]["images"]["jpg"]["large_image_url"])
+
+
   # manga require saga, volume, description, and number
   saga = data["data"]["titles"][0]["title"]
   picture = data["data"]["images"]["jpg"]["large_image_url"]
   volume = rand(1..data["data"]["volumes"].to_i)
   description = data["data"]["background"]
-  new_manga = Manga.new(saga: saga, picture: picture, volume: volume, description: description, user: user)
+  new_manga = Manga.new(saga: saga, volume: volume, description: description, user: user)
+  new_manga.photo.attach(io: file, filename: "#{saga}-#{volume}.jpg", content_type: "image/jpg")
   new_manga.save!
 
   sleep 1
