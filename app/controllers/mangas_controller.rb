@@ -40,8 +40,9 @@ class MangasController < ApplicationController
   end
 
   def index
-    @manga = Manga.all
+    @mangas = Manga.search_by_saga_and_description(params[:search])
     @mangas = policy_scope(Manga)
+
   end
 
   private
