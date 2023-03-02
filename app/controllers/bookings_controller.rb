@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = current_user.mangas.map { |manga| manga.bookings.map { |booking| booking } }
+    @bookings = current_user.bookings_as_owner
     @waiting = []
     @accepted = []
     @denied = []
