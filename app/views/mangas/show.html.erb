@@ -18,15 +18,31 @@
       </div>
 
       <div class="div-right d-flex" style="margin-top: 330px">
-          <%= link_to mangas_path, class: "button-black linkto-home ", style: "margin: 1px" do  %>
+          <%= link_to mangas_path, class: "button-black linkto-home ", style: "margin: 1px"  do  %>
             Back to list
           <% end %>
-          <%= link_to mangas_path, class: "button-white", style: "margin: 1px" do  %>
-            Book it !
+
+
+          <% if current_user == @manga.user %>
+            <%= link_to edit_manga_path(@manga), class: "button-white", style: "margin: 1px" do  %>
+              Update it ?
+            <% end %>
+          <% else %>
+            <%= link_to new_manga_booking_path(@manga), class: "button-white", style: "margin: 1px" do  %>
+              Book it !
+            <% end %>
           <% end %>
-          <%= link_to mangas_path, class: "button-red linkto-home", style: "margin: 1px" do  %>
-            Delete It
+
+
+
+
+          <% if policy(@manga).destroy? %>
+            <%= link_to manga_path(@manga), class: "button-red linkto-home", style: "margin: 1px", 'data-turbo-method': :delete do  %>
+              Delete It
+            <% end %>
           <% end %>
+
+
         </div>
       </div>
   </div>

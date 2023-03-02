@@ -33,8 +33,8 @@ class MangasController < ApplicationController
   end
 
   def destroy
-    authorize @manga
     @manga = Manga.find(params[:id])
+    authorize @manga
     @manga.destroy
     redirect_to mangas_path, status: :see_other
   end
