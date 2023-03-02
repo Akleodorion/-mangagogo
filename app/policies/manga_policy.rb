@@ -29,4 +29,8 @@ class MangaPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
+
+  def index?
+    true
+  end
 end

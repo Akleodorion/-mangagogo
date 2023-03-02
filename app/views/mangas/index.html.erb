@@ -1,7 +1,7 @@
 
 <div class = "container">
   <div class="cards">
-  <% @mangas.each do |element| %>
+  <% @query.each do |element| %>
     <div>
       <div class="illustration", style="background-image: url('<%= cl_image_path element.photo.key, crop: :fill %>')">
         <a href="<%= manga_path(element) %>", style="display: block;width: 100%;height: 100%;">
