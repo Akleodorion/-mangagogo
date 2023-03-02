@@ -1,13 +1,13 @@
 <h1>Bookings#index</h1>
 
 <ul>
-  <% @wainting.each |element| do %>
+  <% @waiting.each do |element| %>
     <li class="wainting"> <%= element %> </li>
   <% end %>
-  <% @accepted.each |element| do %>
+  <% @accepted.each do |element| %>
     <li class="accepted"> <%= element %> </li>
   <% end %>
-  <% @denied.each |element| do %>
+  <% @denied.each do |element| %>
     <li class="denied"> <%= element %> </li>
   <% end %>
 </ul>
