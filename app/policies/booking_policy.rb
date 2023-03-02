@@ -9,4 +9,8 @@ class BookingPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def demands?
+    true
+  end
 end

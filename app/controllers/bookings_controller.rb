@@ -42,6 +42,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def demands
+    @booking = Booking.new
+    authorize @booking
+  end
+
 end
 
 private
