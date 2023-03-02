@@ -24,17 +24,17 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking)
-    @my_bookings = current_user.mangas.map { |manga| manga.bookings.map { |booking| booking } }
+    @my_bookings = current_user.bookings_as_owner
     @waiting = []
     @accepted = []
     @denied = []
     @red = []
     @my_bookings.each do |element|
       if element[:red] == false
-        if element[:pending].exist?
-          element[:pending] == true ? @accepted << element : @denied << element
-        else
+        if element[:pending].nil?
           @waiting << element
+        else
+          element[:pending] == true ? @accepted << element : @denied << element
         end
       else
         @red << element
