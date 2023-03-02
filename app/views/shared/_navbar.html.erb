@@ -15,7 +15,7 @@
             <div class="dropdown-menu dropdown-menu-end dropdown-card" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">My bookings</a>
               <a class="dropdown-item" href="#">Settings</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+              <%= link_to 'Log out', destroy_user_session_path, class: "dropdown-item", 'data-turbo-method': :delete %>
             </div>
           </li>
           <!--li class="nav-item"-->
