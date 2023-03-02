@@ -40,9 +40,9 @@ class MangasController < ApplicationController
   end
 
   def index
-    @mangas = Manga.search_by_saga_and_description(params[:search])
     @mangas = policy_scope(Manga)
-
+    # cette ligne permet de passer le conflit avec la policy scope
+    @query = Manga.search_by_saga_and_description(params[:query])
   end
 
   private
