@@ -5,9 +5,13 @@
       <%= image_tag 'ramen.jpg', class:"search-image" %>
     </div>
     <div class = "search-bar-container">
-        <form action='/mangas' id="search-bar" method="get">
-          <input type="input" name="seach" id="search-bar-input" placeholder="Which manga do you want to book ?">
-        </form>
+    <%= form_with url: mangas_path, method: :get, class: "search-bar" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-bar-input",
+        placeholder: "Which manga would you like to book ?"
+      %>
+    <% end %>
     </div>
 </div>
 <div class="bottom-banner">
