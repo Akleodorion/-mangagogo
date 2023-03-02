@@ -19,13 +19,16 @@ user.save!
   url = "https://api.jikan.moe/v4/manga/#{random_id}"
   json_data = URI.open(url).read
   data = JSON.parse(json_data)
+  if data[:status] == '404'
+    next
+  end
 
   # manga require saga, volume, description, and number
   saga = data["data"]["titles"][0]["title"]
   picture = data["data"]["images"]["jpg"]["large_image_url"]
   volume = rand(1..data["data"]["volumes"].to_i)
-  description = data["data"]["background"]
-  new_manga = Manga.new(saga: saga, picture: picture, volume: volume, description: description, user: user)
+  description = data["data"]["background"][0, 250]
+  new_manga = Manga.new(saga: saga, volume: volume, description: description, user: user)
   new_manga.save!
 
   sleep 1
