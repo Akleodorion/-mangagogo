@@ -10,7 +10,7 @@ class MangasController < ApplicationController
     @manga = Manga.new(manga_params)
     @manga.user = current_user
     authorize @manga
-    if @manga.save
+    if @manga.save!
       redirect_to manga_path(@manga)
     else
       render :new, status: :unprocessable_entity
