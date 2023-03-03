@@ -1,1 +1,56 @@
 <h1>Mes demandes</h1>
+<h1> </h1>
+
+<div class="container">
+  <div class="request-status">
+    <p> pending :</p>
+  </div>
+  <% @waiting.each do |element| %>
+
+    <div class="large-card waiting">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="request-status">
+    <p> accepted :</p>
+  </div>
+
+  <% @accepted.each do |element| %>
+    <div class="large-card accepted">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+      <%# #TODO CHECKBOX %>
+    </div>
+  <% end %>
+
+  <div class="request-status">
+    <p> denied: </p>
+  </div>
+
+  <% @denied.each do |element| %>
+    <div class="large-card denied">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+      <%# #TODO CHECKBOX %>
+      </div>
+
+    </div>
+    <% end %>
+</div>
