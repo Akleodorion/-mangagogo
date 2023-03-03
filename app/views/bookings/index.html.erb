@@ -1,13 +1,60 @@
-<h1>Bookings#index</h1>
+<h1> </h1>
 
-<ul>
+<div class="container">
+  <div class="request-status">
+    <p> pending :</p>
+  </div>
   <% @waiting.each do |element| %>
-    <li class="waiting"> <%= element %> 1</li>
+
+    <div class="large-card waiting">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+      <div class='buttons_section'>
+        <div class ='button-black'> <%= link_to 'Accept', accept_path(element), data: {turbo_method: :patch} %> </div>
+        <div class ='button-red'> <%= link_to 'Deny', deny_path(element), data: {turbo_method: :put} %> </div>
+      </div>
+
+    </div>
   <% end %>
+
+  <div class="request-status">
+    <p> accepted :</p>
+  </div>
+
   <% @accepted.each do |element| %>
-    <li class="accepted"> <%= element %> 2</li>
+    <div class="large-card accepted">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+      <%# #TODO CHECKBOX %>
+    </div>
   <% end %>
+
+  <div class="request-status">
+    <p> denied: </p>
+  </div>
+
   <% @denied.each do |element| %>
-    <li class="denied"> <%= element %> 3</li>
-  <% end %>
-</ul>
+    <div class="large-card denied">
+      <div class='info_and_pict'>
+        <img src=<%=cl_image_path element.manga.photo.key, crop: :fill %> alt="illustration of the booked manga" class='small-illustration'>
+        <div class='info'>
+          <h2><%= element.manga.saga %> n°<%= element.manga.volume %></h2>
+          <p>from: <%=element.start_date %> to <%=element.end_date%></p>
+        </div>
+      </div>
+      <%# #TODO CHECKBOX %>
+      </div>
+
+    </div>
+    <% end %>
+</div>

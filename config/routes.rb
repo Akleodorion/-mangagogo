@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/booking/:user_id/my_offers', to: 'bookings#offers'
   get '/components', to: 'pages#components'
   get 'demands', to: 'bookings#demands'
+  patch '/booking/:id', to: 'bookings#accept', as: 'accept'
+  put '/booking/:id', to: 'bookings#deny', as: 'deny'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -43,8 +43,40 @@ class BookingsController < ApplicationController
   end
 
   def demands
-    @booking = Booking.new
+    @bookings = policy_scope(Booking)
+    @my_bookings = current_user.bookings
+    authorize @my_bookings
+    @waiting = []
+    @accepted = []
+    @denied = []
+    @red = []
+    @my_bookings.each do |element|
+      if element[:red] == false
+        if element[:pending].nil?
+          @waiting << element
+        else
+          element[:pending] == true ? @accepted << element : @denied << element
+        end
+      else
+        @red << element
+      end
+    end
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
     authorize @booking
+    @booking.pending = true
+    @booking.save
+
+    # @booking.update(booking_params)
+  end
+
+  def deny
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.pending = false
+    @booking.save
   end
 
 end
