@@ -13,3 +13,7 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url("background.jpg");
+}
