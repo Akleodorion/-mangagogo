@@ -1,7 +1,61 @@
 @import "components/cards";
 
 
-.div-right {
-  width: 423px;
-  margin: auto;
+.main-container {
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.main-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    height: 100%;
+
+}
+
+.left-div-image {
+  height: 100%;
+  width: 35%;
+  background-size: cover;
+  background-position: center;
+}
+
+.right-div-infos {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saga-volume-div {
+  margin-top: 5px;
+}
+
+.description-div {
+  margin-top: 40px;
+}
+
+.booking-container-visitor {
+  text-align: center;
+  width: 100%;
+}
+
+.booking-container-owner {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.booking-container-owner h1{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
 }

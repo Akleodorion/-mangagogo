@@ -11,8 +11,7 @@ require "open-uri"
 require 'net/http'
 
 API_URL = 'https://api.jikan.moe/v4/manga/'
-User.destroy_all
-user = User.new(email: "email@mail.com", password: "azerty")
+user = User.all.first
 user.save!
 
 60.times do

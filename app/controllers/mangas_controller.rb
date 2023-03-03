@@ -20,6 +20,7 @@ class MangasController < ApplicationController
   def show
     @manga = Manga.find(params[:id])
     authorize @manga
+    @booking = Booking.new
   end
 
   def edit
