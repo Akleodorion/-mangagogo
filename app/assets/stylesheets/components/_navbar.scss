@@ -38,6 +38,12 @@
   margin-left: 30px;
 }
 
+.nav-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .nav-link {
   text-decoration: none;
   border: 1px solid black;
