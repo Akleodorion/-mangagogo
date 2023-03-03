@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
       redirect_to manga_path(@manga)
       flash[:notice] = "Booking saved successfully"
     else
-      render :new
+      render "mangas/show", status: :unprocessable_entity
     end
   end
 
