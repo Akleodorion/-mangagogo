@@ -1,5 +1,7 @@
 <div class="container mt-5">
-  <h1>Edit Manga</h1>
-  <%= render "form", manga: @manga %>
-  <%= link_to "Back to list", mangas_path %>
+  <div class="form-size">
+    <h1 style="text-align: center">Edit your Manga</h1>
+    <%= render "form", manga: @manga %>
+    <%= link_to "Back to list", manga_path, class: "button-black", style: "margin-top: 100px" %>
+  </div>
 </div>
