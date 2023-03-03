@@ -68,6 +68,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.pending = true
     @booking.save
+    redirect_to bookings_path
 
     # @booking.update(booking_params)
   end
@@ -77,6 +78,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.pending = false
     @booking.save
+    redirect_to bookings_path
   end
 
 end
