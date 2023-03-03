@@ -5,7 +5,7 @@
   <%= simple_form_for [@manga, @booking], data: { controller: 'flatpickr' } do |f| %>
   <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
   <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" }, id: 'end_time' } %>
-  <div class="submit-create-manga"> <%= f.button :submit, "Submit", class: "btn-red"%> </div>
+  <div class="submit-create-booking"> <%= f.button :submit, "Submit", class: "button-red"%> </div>
   <% end %>
 
   </div>
