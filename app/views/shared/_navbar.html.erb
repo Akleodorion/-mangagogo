@@ -1,27 +1,56 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon p-4">
   <div class="container-fluid">
     <%= link_to mangas_path, class: "btn-logo" do %>
       <h1>Mangagogo</h1>
     <% end %>
-    <div class="container-navigation">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <%= link_to '+ Post a manga', new_manga_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
+
+
+
+
+    <div class="">
+
+      <div class="container-navigation ">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-nav me-auto">
+
+          <div class="nav-item">
+           <%= form_with url: mangas_path, method: :get, class: "me-3 mt-2" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "search-bar-input",
+                placeholder: "Which manga would you like to book ?"
+              %>
+            <% end %>
+          </div>
+
+
+          <div class="">
+
+
+
+
+            <%= link_to '+ Add a manga', new_manga_path, class: "button-black me-3 mt-1" %>
+          </div>
+          <div class="nav-item dropdown d-flex align-items-center">
             <i class="fa-solid fa-bars " id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
             <div class="dropdown-menu dropdown-menu-end dropdown-card" aria-labelledby="navbarDropdown">
               <%= link_to 'My bookings', bookings_path, class: "dropdown-item" %>
               <%= link_to 'My demands', demands_path, class: "dropdown-item" %>
               <%= link_to 'Log out', destroy_user_session_path, class: "dropdown-item", 'data-turbo-method': :delete %>
             </div>
-          </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
-      </ul>
+          </div>
+            <!--li class="nav-item"-->
+            <!--/li-->
+        </div>
+      </div>
+      </div>
     </div>
-    </div>
+
+
+
+
   </div>
 </div>
